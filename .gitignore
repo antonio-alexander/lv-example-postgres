@@ -1,3 +1,6 @@
+# Unnecessary files
+.DS_Store
+
 # Libraries
 *.lvlibp
 *.llb
@@ -10,8 +13,14 @@
 
 # Executables
 *.exe
+*.msi
 
 # Metadata
 *.aliases
 *.lvlps
 .cache/
+
+# Build Objects
+distribution/vipm/*.vip
+distribution/working/*.zip
+builds/*

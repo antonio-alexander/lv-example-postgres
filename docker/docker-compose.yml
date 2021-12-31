@@ -1,0 +1,25 @@
+version: "3"
+services:
+  postgres:
+    container_name: "postgres"
+    hostname: "postgres"
+    image: postgres:latest
+    restart: "always"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+
+  timescaledb:
+    container_name: "timescaledb"
+    hostname: "timescaledb"
+    image: timescale/timescaledb:2.5.1-pg14
+    restart: "always"
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
